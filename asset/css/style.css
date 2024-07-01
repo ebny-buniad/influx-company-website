@@ -711,6 +711,12 @@ input:focus {
     margin-top: 70px;
   }
 }
+@media(min-width: 1440px) {
+  .contact-bg {
+    height: 100vh;
+    object-fit: cover;
+  }
+}
 
 .contact h3 {
   text-align: center;
@@ -735,6 +741,25 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+
+.btn-submit{
+  background-color: #203242;
+  padding: 10px 30px;
+  border-radius: 4px;
+  border: 0px;
+  color: white;
+  transition: .3s;
+  font-weight: 500;
+}
+
+.btn-submit:hover{
+   background-color: #ffa361;
+   color: #000;
+}
+
+.contact-icon{
+  color: #f47a20;
+}
 /* ====== Contact Page End ======= */
 
 
@@ -777,20 +802,6 @@ footer a:hover {
   color: #565656;
 }
 
-.btn-submit{
-  background-color: #f47a20;
-  padding: 10px 30px;
-  border-radius: 5px;
-  border: 0px;
-  color: white;
-  transition: .3s;
-  font-weight: 600;
-}
-
-.btn-submit:hover{
-   background-color: rgb(255, 215, 93);
-   color: #000;
-}
 
 /* ====== Footer End ======== */
 
