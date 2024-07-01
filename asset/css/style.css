@@ -11,9 +11,10 @@ body {
 }
 
 /* General CSS Start */
-a{
-  text-decoration:none !important;
+a {
+  text-decoration: none !important;
 }
+
 .nav-link {
   font-weight: 500;
   text-decoration: none !important;
@@ -653,28 +654,32 @@ input:focus {
 
 
 /* ====== Shopping Section Start ======== */
-.sell-product-card{
+.sell-product-card {
   /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
   border: 1px solid rgb(189, 189, 189) !important;
   border-radius: 10px;
 }
-.product-img{
+
+.product-img {
   border-top-left-radius: 10px !important;
   border-top-right-radius: 10px !important;
 }
-.product-name{
+
+.product-name {
   padding: 5px 0px;
   font-size: 16px;
   font-weight: 600;
 }
 
-.shop-now-footer{
+.shop-now-footer {
   border-bottom-left-radius: 10px !important;
   border-bottom-right-radius: 10px !important;
 }
-.card-footer a{
+
+.card-footer a {
   text-decoration: none;
 }
+
 /* ====== Shopping Section End ======== */
 
 
@@ -700,24 +705,55 @@ input:focus {
 
 
 
+/* ====== Contact Page Start ======= */
+@media(max-width: 576px) {
+  .contact-bg {
+    margin-top: 70px;
+  }
+}
 
+.contact h3 {
+  text-align: center;
+  font-weight: 400;
+  color: #7e7e7e;
+  font-size: 40px;
+
+  .fa-arrow-up-right-from-square {
+    font-size: 23px;
+  }
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* ====== Contact Page End ======= */
 
 
 
 
 
 /* ====== Footer Start ======== */
-footer a{
+footer a {
   color: #111;
   font-size: 13px;
   font-weight: 500;
   transition: .3s;
 }
 
-footer a:hover{
+footer a:hover {
   color: #f47a20;
 }
-.icon-box{
+
+.icon-box {
   border: 1px solid rgb(191, 191, 191);
   height: 40px;
   width: 40px;
@@ -726,19 +762,36 @@ footer a:hover{
   transition: .3s;
 }
 
-.icon-box:hover{
+.icon-box:hover {
   background-color: #061434;
-  .social-icon{
+
+  .social-icon {
     color: #fff;
   }
 }
 
-.social-icon{
+.social-icon {
   margin-left: 28%;
   margin-top: 28%;
   font-size: 18px;
   color: #565656;
 }
+
+.btn-submit{
+  background-color: #f47a20;
+  padding: 10px 30px;
+  border-radius: 5px;
+  border: 0px;
+  color: white;
+  transition: .3s;
+  font-weight: 600;
+}
+
+.btn-submit:hover{
+   background-color: rgb(255, 215, 93);
+   color: #000;
+}
+
 /* ====== Footer End ======== */
 
 
