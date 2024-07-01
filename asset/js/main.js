@@ -16,3 +16,37 @@ $(document).ready(function () {
 
 });
 
+
+AOS.init();
+AOS.refresh();
+
+$('.owl-carousel').owlCarousel({
+    loop: true,
+    margin: 10,
+    responsiveClass: true,
+    responsive: {
+        0: {
+            items: 1,
+            nav: false
+        },
+        600: {
+            items: 3,
+            nav: false
+        },
+        1000: {
+            items: 5,
+            nav: false,
+            loop: false
+        }
+    }
+})
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    /////// Prevent closing from click inside dropdown
+    document.querySelectorAll('.dropdown-menu').forEach(function (element) {
+        element.addEventListener('click', function (e) {
+            e.stopPropagation();
+        });
+    })
+});

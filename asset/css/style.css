@@ -11,37 +11,28 @@ body {
 }
 
 /* General CSS Start */
-a {
+a{
+  text-decoration:none !important;
+}
+.nav-link {
+  font-weight: 500;
   text-decoration: none !important;
-  color: black !important;
+  color: black;
   transition: .3s;
 }
 
-a:hover {
-  color: #2ab65e !important;
+.nav-link:hover {
+  color: #f47a20 !important;
+
+  .nav-drop-icon {
+    color: #f47a20 !important;
+  }
 }
 
-.icon {
-  color: gray;
-  font-size: 14px;
+.nav-drop-icon {
+  color: rgb(0, 0, 0);
+  font-size: 13px;
   margin-right: 8px;
-}
-
-.read-more-button {
-  border: 1px solid rgb(109, 109, 109);
-  border-radius: 100px;
-  width: 120px;
-  height: 40px;
-  display: block;
-  background: linear-gradient(to right, rgb(49, 173, 105) 50%, white 50%);
-  background-size: 200% 100%;
-  background-position: right bottom;
-  transition: all .5s ease-out;
-}
-
-.read-more-button:hover {
-  border: 1px solid #ffffffff;
-  background-position: left bottom;
 }
 
 .button-text {
@@ -57,15 +48,11 @@ a:hover {
   color: rgb(0, 0, 0) !important;
 }
 
-h1 {
-  font-weight: 900 !important;
-}
 
 /* General CSS End */
 
 /* ===== Navbar Start ===== */
 .navbar-show-bg {
-  /* From https://css.glass */
   background: rgba(255, 255, 255, 0.48);
   border-radius: 50px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -84,9 +71,9 @@ h1 {
   width: 20px !important;
 }
 
-.active {
-  /* border-bottom: 1px solid #2ab65e; */
-}
+/* .active {
+  color: #f47a20 !important;
+} */
 
 .main-header .navbar-collapse .navbar-nav .nav-item .nav-link {
   padding: 0px;
@@ -109,10 +96,11 @@ h1 {
   z-index: 99;
   width: 100%;
   padding: 10px 0;
+
   /* box-shadow: 0px 10px 30px rgba(0, 71, 55, 0.1); */
-.navbar-show-bg{
-  background-color: #ffffff;
-}
+  .navbar-show-bg {
+    background-color: #ffffff;
+  }
 }
 
 @media (max-width: 576px) {
@@ -136,18 +124,18 @@ h1 {
   }
 }
 
-@media (max-width: 1000px){
-  .navbar-show-bg{
+@media (max-width: 1000px) {
+  .navbar-show-bg {
     border-radius: 10px;
   }
 }
 
 @media (max-width: 1200px) {
- 
+
   .nav-item {
     padding-top: 10px;
   }
-  
+
   .search-bar {
     margin-top: 8px;
   }
@@ -196,8 +184,7 @@ h1 {
 }
 
 .dropdown-item:hover {
-  background-color: #2ab65e !important;
-  color: #ffffffff !important;
+  color: #f47a20 !important;
 }
 
 input:focus {
@@ -223,31 +210,56 @@ input:focus {
   width: 150px;
 }
 
+.navbar .megamenu {
+  padding: 1rem;
+}
+
+@media all and (min-width: 576px) {
+
+  .navbar .has-megamenu {
+    position: static !important;
+    margin-top: 0px !important;
+  }
+
+  .navbar .megamenu {
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+
+}
+
+@media all and (max-width: 992px) {
+
+  .navbar .has-megamenu {
+    position: static !important;
+    margin-top: 0px !important;
+  }
+
+  .navbar .megamenu {
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+
+}
+
+@media(max-width: 991px) {
+
+  .navbar.fixed-top .navbar-collapse,
+  .navbar.sticky-top .navbar-collapse {
+    overflow-y: auto;
+    max-height: 90vh;
+    margin-top: 0px;
+  }
+}
+
 /* ===== Navbar End ===== */
 
 
+/* ====== Hero Start ======= */
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* carousel */
 .carousel {
   height: 100vh;
   width: 100vw;
@@ -558,63 +570,186 @@ input:focus {
   }
 }
 
+/* ====== Hero End ======= */
+
+/* ====== Product Categories Start ======== */
 
 
-
-
-
-
-
-/* ===== About Us Start ===== */
-
-.about-section {
-  background-image: url('../images/home/bg-grid.8abf9bc6.svg');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  /* background-color: #f5f5f5; */
-}
-
-about-us-content-box {
-  background-color: rgb(61, 61, 61);
-  border-radius: 10px;
-}
-
-/* ===== About Us End ===== */
-
-/* ===== Mission Start ===== */
-.mission-card-images {
-  border-radius: 10px;
-  position: relative;
+.product-categories-card img {
+  width: 120px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   margin: auto;
+  display: block;
+}
+
+.product-categories-card {
+  opacity: 0.6;
+  transition: 0.3s;
+  filter: grayscale(100%);
+  text-decoration: none;
+}
+
+.product-categories-card:hover {
+  opacity: 5;
+  transition: 0.3s;
+  filter: grayscale(0);
+}
+
+
+.text-move:hover {
+  cursor: pointer
+}
+
+.text-move {
+  margin: auto;
+  display: block;
+  background: transparent;
+  outline: none;
+  position: relative;
+  border: 1px solid #111;
+  border-radius: 3px;
+  padding: 10px 25px;
   overflow: hidden;
 }
 
-.mission-card-images img {
-  width: 100%;
-  transition: all 0.3s;
-  display: block;
-  width: 100%;
-  height: auto;
-  transform: scale(1);
+/*button:before (attr data-hover)*/
+.text-move:hover:before {
+  opacity: 1;
+  transform: translate(0, 0);
 }
 
-.mission-card-images:hover img {
-  transform: scale(1.1);
-}
-
-.mission-card-title {
+.text-move:before {
+  content: attr(data-hover);
   position: absolute;
-  bottom: 16px;
-  left: 16px;
+  top: 3px;
+  left: 0;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 800;
+  font-size: 20px;
+  opacity: 0;
+  transform: translate(-100%, 0);
+  transition: all .3s ease-in-out;
 }
 
-.mission-card-title h2 {
-  font-size: 25px;
-  color: #ffffffff;
+/*button div (button text before hover)*/
+.text-move:hover div {
+  opacity: 0;
+  transform: translate(100%, 0)
 }
 
-/* ===== Mission End ===== */
+.text-move div {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 800;
+  font-size: .8em;
+  transition: all .3s ease-in-out;
+}
+
+
+/* ====== Product Categories End ======== */
+
+
+/* ====== Shopping Section Start ======== */
+.sell-product-card{
+  /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+  border: 1px solid rgb(189, 189, 189) !important;
+  border-radius: 10px;
+}
+.product-img{
+  border-top-left-radius: 10px !important;
+  border-top-right-radius: 10px !important;
+}
+.product-name{
+  padding: 5px 0px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.shop-now-footer{
+  border-bottom-left-radius: 10px !important;
+  border-bottom-right-radius: 10px !important;
+}
+.card-footer a{
+  text-decoration: none;
+}
+/* ====== Shopping Section End ======== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ====== Footer Start ======== */
+footer a{
+  color: #111;
+  font-size: 13px;
+  font-weight: 500;
+  transition: .3s;
+}
+
+footer a:hover{
+  color: #f47a20;
+}
+.icon-box{
+  border: 1px solid rgb(191, 191, 191);
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+  border-radius: 25px;
+  transition: .3s;
+}
+
+.icon-box:hover{
+  background-color: #061434;
+  .social-icon{
+    color: #fff;
+  }
+}
+
+.social-icon{
+  margin-left: 28%;
+  margin-top: 28%;
+  font-size: 18px;
+  color: #565656;
+}
+/* ====== Footer End ======== */
+
+
+
+
+
+
+
+
+
+
 
 
 
