@@ -695,6 +695,15 @@ input:focus {
 /* ====== Shopping Section End ======== */
 
 
+/* ====== Company Page Start ========== */
+
+.company-page-bg{
+  width: 93.53%;
+  margin: auto;
+  display: block;
+  border-radius: 10px;
+}
+/* ====== Company Page End ========== */
 
 
 
@@ -713,13 +722,32 @@ input:focus {
 
 
 
+
+/* ====== News Start ===== */
+
+.news-img{
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.card-footer a{
+  color: #000 !important;
+  font-size: 14px;
+  transition: .3s;
+}
+
+.card-footer a:hover{
+  color: #f1683a !important; 
+}
+/* ====== News End ===== */
 
 
 
 
 /* ====== Contact Page Start ======= */
 @media(max-width: 576px) {
-  .contact-bg {
+  .contact-bg, .company-page-bg {
     margin-top: 70px;
   }
 }
